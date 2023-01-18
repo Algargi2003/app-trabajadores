@@ -14,5 +14,5 @@
         {{t.votos}}
       </li>
     </ul> -->
-    <app-card-trabajador *ngFor="let t of trabajadores" [trabajador]="t" (borraDesdeHijo)="borra(t.id)" (likeDesdeHijo)="like(t.id)"(unlikeDesdeHijo)="unlike(t.id)"></app-card-trabajador>
+    <app-card-trabajador *ngFor="let t of trabajadores" [trabajador]="t" (borraDesdeHijo)="borra($event)" (likeDesdeHijo)="like($event)"(unlikeDesdeHijo)="unlike($event)"></app-card-trabajador>
   </div>
