@@ -1,0 +1,33 @@
+<div class="col mb-6">
+
+  <div class="card h-100">
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="" src="../../assets/{{cliente.foto}}" height="100px" width="100px" alt="Card image cap">  <!-- completar src con la foto del cliente -->
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">{{cliente.nombre}}</h4>   <!-- Mostrar nombre del cliente -->
+      <h4>{{cliente.cargo}}</h4>                     <!-- Mostrar cargo del cliente -->
+      <!--Text-->
+
+  </div>
+  <button routerLink="/clientes" class="btn btn-danger">Volver</button>
+  <!-- Card -->
+</div>
+
+<!-- <p class="card-text">{{cliente.votos}}
+  <img src="../../assets/like.jpg" (click)="like(cliente.id)">
+  <img src="../../assets/unlike.jpg" (click)="unlike(cliente.id)">
+</p>
+</div>
+<div class="text-center">
+<button type="button" class="btn btn-danger" (click)="eliminar(cliente.id)">Borrar cliente</button>
+</div> -->
+

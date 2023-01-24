@@ -1,4 +1,8 @@
-<p>Lista de Clientes</p>
-<ul>
-  <li *ngFor="let c of clientes">{{c}}</li>
-</ul>
+<h2>Lista de Clientes</h2>
+<table >
+  <tr *ngFor="let c of clientes">
+    <td>{{c.id}}</td>
+    <td>{{c.nombre}}</td>
+    <td><button class="btn btn-info" routerLink="/clientes/{{c.id}}">Ver</button></td>
+  </tr>
+</table>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Trabajador } from '../Modelos/trabajador';
+import { TrabajadorService } from '../Servicios/trabajador.service';
 
 @Component({
   selector: 'app-clientes',
@@ -6,7 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent {
-  clientes:Array<string>=[
-    "Alvaro", "Hector", "Ivan", "Pepe", "Pedro"
-  ]
+  clientes:Array<Trabajador>=[];
+  constructor(private servicioClientes:TrabajadorService){}
+  ngOnInit(){
+    this.clientes=this.servicioClientes.getTrabajadores();
+  }
+  verCliente(){
+
+  }
 }

@@ -15,4 +15,6 @@
       </li>
     </ul> -->
     <app-card-trabajador *ngFor="let t of trabajadores" [trabajador]="t" (borraDesdeHijo)="borra($event)" (likeDesdeHijo)="like($event)"(unlikeDesdeHijo)="unlike($event)"></app-card-trabajador>
+    <button class="btn btn-danger" (click)="irInicio()">Inicio</button>
+    <button class="btn btn-info" routerLink="/">Ir a inicio</button>
   </div>

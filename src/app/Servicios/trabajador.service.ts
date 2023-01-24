@@ -58,6 +58,11 @@ export class TrabajadorService {
    getTrabajadores(){
     return this.trabajadores;
    }
+   getTrabajador(id:number){
+
+    let posicion = this.trabajadores.findIndex(t=>t.id==id);
+    return this.trabajadores[posicion];
+   }
 
   // metodo para borrar el trabajador pasado por id del array de trabajadores
   borrar(id: number) {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Trabajador } from '../Modelos/trabajador';
 import { TrabajadorService } from '../Servicios/trabajador.service';
 
@@ -11,11 +12,10 @@ export class TrabajadoresComponent {
   titulo="Lista Trabajadores";
   trabajadores:Array<Trabajador>=[];
 
-  constructor(private trabajadoresService:TrabajadorService){}
+  constructor(private trabajadoresService:TrabajadorService,private miRouter:Router){}
 
   ngOnInit(){
     this.trabajadores = this.trabajadoresService.getTrabajadores();
-    console.log(this.trabajadores);
   }
 
   like(id:number){
@@ -26,5 +26,8 @@ export class TrabajadoresComponent {
   }
   borra(id:number){
     this.trabajadoresService.borrar(id);
+  }
+  irInicio(){
+    this.miRouter.navigate(["/clientes"]);
   }
 }

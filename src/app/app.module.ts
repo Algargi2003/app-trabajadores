@@ -8,6 +8,7 @@ import { CardTrabajadorComponent } from './card-trabajador/card-trabajador.compo
 import { HeaderComponent } from './header/header.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ClientesComponent } from './clientes/clientes.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ClientesComponent } from './clientes/clientes.component';
     CardTrabajadorComponent,
     HeaderComponent,
     InicioComponent,
-    ClientesComponent
+    ClientesComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,
